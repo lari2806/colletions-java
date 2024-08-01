@@ -1,9 +1,8 @@
+package list;
 
 
 import java.util.ArrayList;
 import java.util.List;
-
-import list.Tarefa;
 
 public class ListaTarefa {
 
