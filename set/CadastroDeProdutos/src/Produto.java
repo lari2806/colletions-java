@@ -1,4 +1,5 @@
-public class Produto {
+import java.util.Comparator;
+public class Produto implements Comparable<Produto> {
 
    private String nome;
    private long codigo;
@@ -50,6 +51,19 @@ public boolean equals(Object obj) {
 public String toString() {
     return "Produto [nome=" + nome + ", codigo=" + codigo + ", preco=" + preco + ", quantidade=" + quantidade + "]";
 }
+@Override
+public int compareTo(Produto p) {
+    return nome.compareToIgnoreCase(p.getNome());
+}
 
-   
+}
+
+
+class ComparatorPorPreco implements Comparator<Produto>{
+
+    @Override
+    public int compare(Produto p1, Produto p2) {
+       return Double.compare(p1.getPreco(), p2.getPreco());
+    }
+
 }
