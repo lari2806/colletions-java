@@ -17,10 +17,12 @@ public abstract class Conta implements IConta {
     @Override
     public void sacar(double valor) {
         this.saldo -= valor;
+        System.out.println("Você sacou " +  valor + " seu saldo atual é: " + this.saldo );
     }
     @Override
     public void depositar(double valor) {
         this.saldo += valor;
+        System.out.println("Você depositou " +  valor + " seu saldo atual é: " + this.saldo);
     }
     @Override
     public void transferir(double valor, Conta contaDestino) {
